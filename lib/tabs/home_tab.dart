@@ -1,15 +1,42 @@
 import 'package:flutter/material.dart';
 
-class HomeTab extends StatefulWidget {
+class HomeTab extends StatelessWidget {
   const HomeTab({Key? key}) : super(key: key);
 
   @override
-  State<HomeTab> createState() => _HomeTabState();
-}
-
-class _HomeTabState extends State<HomeTab> {
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    Widget _buildDodyBack() => Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors:[
+            Color.fromARGB(255, 211, 118, 130),
+            Color.fromARGB(255, 253, 181, 168),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight
+        ),
+      ),
+    );
+
+    return Stack(
+      children: [
+        _buildDodyBack(),
+        const CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              floating: true,
+              snap: true,
+              backgroundColor: Colors.transparent,
+              elevation: 0.0,
+              flexibleSpace: FlexibleSpaceBar(
+                title: Text('Novidades'),
+                centerTitle: true,
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
   }
 }
+
