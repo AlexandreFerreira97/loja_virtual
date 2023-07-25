@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../tabs/home_tab.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class HomeScreen extends StatelessWidget {
       controller: pageController,
       physics: const NeverScrollableScrollPhysics(),
       children: [
+        HomeTab(),
       ],
     );
   }
