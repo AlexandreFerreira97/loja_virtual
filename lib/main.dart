@@ -9,6 +9,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      title: 'Flutter clothing',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        primaryColor: Color.fromARGB(255, 4, 125, 141)
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Container(),
+    );
   }
 }
