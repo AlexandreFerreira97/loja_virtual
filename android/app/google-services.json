@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "305185902584",
+    "project_id": "loja-virtual-2a270",
+    "storage_bucket": "loja-virtual-2a270.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305185902584:android:270c06acdd5275b95b900d",
+        "android_client_info": {
+          "package_name": "br.com.faria.lojavirtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305185902584-51hsorisgipgger1652lef1pcci63rq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiz3r4p_2fwaNGLC5QGA4M1zv87UO-_9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305185902584-51hsorisgipgger1652lef1pcci63rq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
