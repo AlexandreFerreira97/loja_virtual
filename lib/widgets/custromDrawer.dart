@@ -23,6 +23,19 @@ class CustomDrawer extends StatelessWidget {
       child: Stack(
         children: [
           _buildDrawerBack(),
+          ListView(
+            padding: const EdgeInsets.only(left: 32.0, top: 16.0),
+            children: [
+              Container(
+                margin: const EdgeInsets.only(bottom: 8.0),
+                padding: const EdgeInsets.fromLTRB(0.0, 16.0, 16.0, 0.0),
+                height: 170.0,
+                child: Stack(
+                  
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
