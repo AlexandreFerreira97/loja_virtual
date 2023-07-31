@@ -53,9 +53,13 @@ class HomeTab extends StatelessWidget {
                     mainAxisSpacing: 1.0,
                     crossAxisSpacing: 1.0,
                     staggeredTile: snapshot.data.docs.map((doc){
-                      
-                    }),);
-              }
+                        return StaggeredGridTile.count(doc.data['x'], doc.data['y']);
+                    }).toList(),
+                  children[
+                    
+                  ],
+                );
+              },
             },),
           ],
         ),
