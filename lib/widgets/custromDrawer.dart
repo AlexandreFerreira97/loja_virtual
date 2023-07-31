@@ -30,8 +30,20 @@ class CustomDrawer extends StatelessWidget {
                 margin: const EdgeInsets.only(bottom: 8.0),
                 padding: const EdgeInsets.fromLTRB(0.0, 16.0, 16.0, 0.0),
                 height: 170.0,
-                child: Stack(
-                  
+                child: const Stack(
+                  children: [
+                    Positioned(top: 8.0,left: 0.0,
+                      child: Text('Flutters\nClothing',style: TextStyle(fontSize: 34.0,fontWeight: FontWeight.bold),),
+                    ),
+                    Positioned(left:0.0,bottom: 0.0 ,
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Olá,',style: TextStyle(fontSize: 18.0,fontWeight: FontWeight.bold),)
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               )
             ],
