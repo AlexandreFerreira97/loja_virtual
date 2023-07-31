@@ -47,13 +47,16 @@ class CustomDrawer extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16.0
                             ),),
+                            onTap: (){},
                           ),
                         ],
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
+              const Divider(),
+              DrawerTile()
             ],
           )
         ],
