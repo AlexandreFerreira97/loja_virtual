@@ -5,6 +5,8 @@ import '../widgets/custromDrawer.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  final _pageController = PageController();
+
   @override
   Widget build(BuildContext context) {
 
@@ -16,7 +18,7 @@ class HomeScreen extends StatelessWidget {
        children: const [
          Scaffold(
           body: HomeTab(),
-           drawer: CustomDrawer(),
+           drawer: CustomDrawer(_pageController),
         )
       ],
     );
