@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../tabs/home_tab.dart';
+import '../tabs/products_tab.dart';
 import '../widgets/custromDrawer.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,11 +16,18 @@ class HomeScreen extends StatelessWidget {
     return PageView(
       controller: pageController,
       physics: const NeverScrollableScrollPhysics(),
-       children: const [
+       children:  [
          Scaffold(
-          body: HomeTab(),
+          body: const HomeTab(),
            drawer: CustomDrawer(_pageController),
-        )
+        ),
+         Scaffold(
+            appBar: AppBar(title: const Text('Produtos'),
+              centerTitle: true,
+            ),
+           drawer: CustomDrawer(_pageController),
+           body: ProductsTab(),
+         ),
       ],
     );
   }
