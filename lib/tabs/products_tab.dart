@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class ProductsTab extends StatelessWidget {
@@ -5,6 +6,8 @@ class ProductsTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return FutureBuilder<QuerySnapshot>(
+      future: Firestore.instance.collection('products').getDocuments(),
+    );
   }
 }
