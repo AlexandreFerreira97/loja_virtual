@@ -45,6 +45,7 @@ class ProductTile extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(0.8),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [Text(product.title,style: const TextStyle(fontWeight: FontWeight.w500),),
                   Text('R\$ ${product.price.toStringAsFixed(2)}',
                         style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 17.0,fontWeight: FontWeight.bold),)],
