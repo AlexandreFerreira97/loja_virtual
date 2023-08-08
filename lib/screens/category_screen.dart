@@ -23,7 +23,7 @@ class CategoryScreen extends StatelessWidget {
           ),
         ),
         body: FutureBuilder<QuerySnapshot>(
-          future: Firestore.instance.collection('products'),
+          future: Firestore.instance.collection('products').documents(snapshot.documentID).collection('itens').getDocuments(),
           builder: (context,snasphot){
             if(!snasphot.hasData){
              return const Center(child: CircularProgressIndicator(),);
