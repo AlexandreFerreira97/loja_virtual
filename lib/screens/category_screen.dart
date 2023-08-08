@@ -28,9 +28,23 @@ class CategoryScreen extends StatelessWidget {
             if(!snasphot.hasData){
              return const Center(child: CircularProgressIndicator(),);
             }else{
-              return const TabBarView(
+              return TabBarView(
               physics: NeverScrollableScrollPhysics(),
-              children: [],
+              children: [
+                  GridView.builder(
+                  padding: const EdgeInsets.all(4.0),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount:2,
+                      mainAxisSpacing: 4.0,
+                      crossAxisSpacing: 4.0,
+                      childAspectRatio: 0.65,
+                    ),
+                    itemCount: snasphot.data.documents.length,
+                    itemBuilder: (context, snasphot){
+
+                    },
+                  ),
+                ],
               );
             }
           },
