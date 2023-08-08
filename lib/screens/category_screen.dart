@@ -22,10 +22,18 @@ class CategoryScreen extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(
-          physics: NeverScrollableScrollPhysics(),
-          children: [],
-        ) ,
+        body: FutureBuilder<QuerySnapshot>(
+          builder: (context,snasphot){
+            if(!snasphot.hasData){
+             return const Center(child: CircularProgressIndicator(),);
+            }else{
+              return const TabBarView(
+              physics: NeverScrollableScrollPhysics(),
+              children: [],
+              );
+            }
+          },
+        ),
       ),
     );
   }
