@@ -10,6 +10,9 @@ class ProductTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: (){
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductScreen(procuct)));
+      },
       child: Card(
         child: type == 'grid' ?
           Column(
