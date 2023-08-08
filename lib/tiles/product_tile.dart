@@ -4,16 +4,16 @@ import 'package:loja_virtual/datas/product_data.dart';
 import '../screens/product_screen.dart';
 
 class ProductTile extends StatelessWidget {
-  const ProductTile(this.type, this.data {Key? key}) : super(key: key);
+  const ProductTile(this.type, this.product {Key? key}) : super(key: key);
 
   final String type;
-  final ProductData data;
+  final ProductData product;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductScreen(procuct)));
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductScreen(product)));
       },
       child: Card(
         child: type == 'grid' ?
