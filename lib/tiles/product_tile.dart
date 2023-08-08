@@ -9,6 +9,30 @@ class ProductTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return InkWell(
+      child: Card(
+        child: type == 'grid' ?
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              AspectRatio(aspectRatio: 0.8,
+              child: Image.network(
+                  product.images[0],
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Expanded(child: Container(
+                padding: const EdgeInsets.all(0.8),
+                child: const Column(
+
+                 ),
+                ),
+              ),
+            ],
+          )
+        : const Row(),
+      ),
+    );
   }
 }
