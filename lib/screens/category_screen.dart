@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:loja_virtual/datas/product_data.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen(this.documentSnapshot {Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class CategoryScreen extends StatelessWidget {
                     ),
                     itemCount: snasphot.data.documents.length,
                     itemBuilder: (context, snasphot){
-
+                      return ProductTile('grid', ProductData.fromDocuments(snapshot.data.documents[index]));
                     },
                   ),
                 ],
