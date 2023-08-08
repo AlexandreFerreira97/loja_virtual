@@ -33,7 +33,25 @@ class ProductTile extends StatelessWidget {
               ),
             ],
           )
-        : const Row(),
+        : Row(
+          children: [
+            Flexible(flex: 1,
+              child:Image.network(product.images[0],
+                  fit: BoxFit.cover,
+                  height: 250.0,
+                ) ,
+              ),
+            Flexible(flex: 1,
+            child: Container(
+              padding: const EdgeInsets.all(0.8),
+              child: Column(
+                children: [Text(product.title,style: const TextStyle(fontWeight: FontWeight.w500),),
+                  Text('R\$ ${product.price.toStringAsFixed(2)}',
+                        style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 17.0,fontWeight: FontWeight.bold),)],
+              ),
+            ),),
+          ],
+        ),
       ),
     );
   }
